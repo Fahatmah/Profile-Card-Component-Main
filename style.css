@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+        --Dark-cyan: hsl(185, 75%, 39%);
+        --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+        --Dark-grayish-blue: hsl(227, 10%, 46);
+        --Dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+}
+
+body {
+        position: relative;
+        display: grid;
+        place-items: center;
+        height: 100vh;
+        font-family: 'Kumbh Sans', sans-serif;
+        background-color: var(--Dark-cyan);
+        background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+        background-position: left -18rem bottom 11rem, top 18rem right -15rem;
+        background-repeat: no-repeat;
+        overflow: hidden;
+}
+
+.profile_card_container {
+        position: relative;
+        width: 20rem;
+        border-radius: 20px;
+        background-color: #fff;
+        overflow: hidden;
+}
+
+.column1 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 1.5rem;
+}
+
+.profile_image {
+        display: flex;
+        position: absolute;
+        z-index: 20;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 5px solid #fff;
+        border-radius: 50%;
+        overflow: hidden;
+}
+
+.profile_image img {
+        width: 100%;
+}
+
+.bg_wallpaper {
+        position: relative;
+        width: 100%;
+        z-index: 1;
+}
+
+.bg_wallpaper img {
+        width: 100%;
+}
+
+.profile_details {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.350rem;
+}
+
+.name_and_age {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 3.8em;
+}
+
+.name {
+        font-size: 1.050rem;
+        color: var(--Very-dark-desaturated-blue);
+}
+
+.age {
+        font-size: 1.050rem;
+        font-weight: 500;
+        color: var(--Dark-gray);
+}
+
+.location {
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: var(--Dark-gray);
+
+}
+
+.column2 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.6rem 3rem;
+}
+
+.column2::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        display: flex;
+        width: 100%;
+        height: 1px;
+        background-color: var(--Very-dark-desaturated-blue);
+        opacity: 0.2;
+}
+
+.followers_likes_photos {
+        display: flex;
+        gap: 3rem;
+}
+
+.followers, .likes, .photos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.2rem;
+}
+
+.followers_likes_photos h4 {
+        color: var(--Very-dark-desaturated-blue);
+        font-weight: 700;
+}
+
+.followers_likes_photos h5 {
+        color: var(--Dark-gray);
+        font-size: 0.7rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+}
+
+.attribution { 
+        position: absolute;
+        bottom: 5px;
+        font-size: 11px; 
+        text-align: center; 
+}
+
+.attribution a { 
+        color: hsl(0, 0%, 100%); 
+}
+
+@media (max-width: 375px) {
+        html {
+                font-size: 90%;
+        }
+        body {
+                background-position: left -50rem bottom 11rem, top 18rem right -43rem;
+        }
+
+        .profile_card_container {
+                width: 90%;
+        }
+}
+
+@media (max-width: 300px) {
+        .name_and_age {
+                margin-top: 70%;
+        }
+        
+        .followers_likes_photos {
+                display: flex;
+                flex-direction: column;
+        }
+}
